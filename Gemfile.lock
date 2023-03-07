@@ -59,6 +59,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.9)
+  kramdown
   webrick
 
 BUNDLED WITH
