@@ -1,6 +1,8 @@
 ---
-title: 我的第一篇文章
+layout: post
+title: My Test Post
 ---
+
  
 # {{ page.title }}
  
