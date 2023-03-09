@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:5555/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5555/" rel="alternate" type="text/html" /><updated>2023-03-09T16:56:48+08:00</updated><id>http://localhost:5555/feed.xml</id><title type="html">rao</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Rao’s blog</title><link href="http://localhost:5555/blog/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Rao’s blog" /><published>2023-03-08T10:59:04+08:00</published><updated>2023-03-08T10:59:04+08:00</updated><id>http://localhost:5555/blog/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:5555/blog/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:5555/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5555/" rel="alternate" type="text/html" /><updated>2023-03-09T22:18:44+08:00</updated><id>http://localhost:5555/feed.xml</id><title type="html">rao</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Rao’s blog</title><link href="http://localhost:5555/blog/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Rao’s blog" /><published>2023-03-08T10:59:04+08:00</published><updated>2023-03-08T10:59:04+08:00</updated><id>http://localhost:5555/blog/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:5555/blog/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -13,24 +13,32 @@
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">reinforce_navigation</title><link href="http://localhost:5555/blog/rl-vnavi/" rel="alternate" type="text/html" title="reinforce_navigation" /><published>2023-03-08T00:00:00+08:00</published><updated>2023-03-08T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl-vnavi</id><content type="html" xml:base="http://localhost:5555/blog/rl-vnavi/">&lt;h1 id=&quot;a-survey-on-visual-navigation-for-artificial-agents-with-deep-reinforcement-learning&quot;&gt;A survey on Visual Navigation for Artificial Agents with deep reinforcement learning&lt;/h1&gt;
 
 &lt;p&gt;the paper divide rl algorithms into three categories: 
-1.Value-based methods
-2.Policy-based methods
+1.Value-based methods&lt;br /&gt;
+2.Policy-based methods&lt;br /&gt;
 3.Actor-critic methods.&lt;/p&gt;
 
 &lt;p&gt;and list four most used network/algorithms:
- 1.deep Q-network
- 2.Deep determinstic policy gradient
- 3.Asynchronous advantage actor-critic(A3C)
+ 1.deep Q-network&lt;br /&gt;
+ 2.Deep determinstic policy gradient&lt;br /&gt;
+ 3.Asynchronous advantage actor-critic(A3C)&lt;br /&gt;
  4.Proximal policy optimization&lt;/p&gt;
 
-&lt;p&gt;5 visual navigation methods:
- 1.direct drl vNavigation
+&lt;p&gt;5 visual navigation methods:&lt;br /&gt;
+ 1.direct drl vNavigation&lt;br /&gt;
   In detail, image depth information is conducive for theagent to avoid obstacles, and the closed-loop detection can beused for efficient exploration and spatial reasoning.&lt;/p&gt;
 
 &lt;p&gt;A method is A3C with auxiliary tasks[59], but auxiliary task mainly depends on human selection. And then Zhu[63] fed the target images into actor-critic NN. In the area of path-planning, [69] proposed a differentiabe path planning method: value iteration network(VIN). [71] reconstructed VIN as arecursive convolutional network.
  2.hierarchical methods:
-  To solve dimentional diaster, hierachical methods decomposes vnavigation into subproblems.
-  1) Hierarchical abstract machines&lt;/p&gt;</content><author><name></name></author><summary type="html">A survey on Visual Navigation for Artificial Agents with deep reinforcement learning</summary></entry><entry><title type="html">reinforce_basic</title><link href="http://localhost:5555/blog/rl_basic/" rel="alternate" type="text/html" title="reinforce_basic" /><published>2023-03-07T00:00:00+08:00</published><updated>2023-03-07T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl_basic</id><content type="html" xml:base="http://localhost:5555/blog/rl_basic/">&lt;!--
+  To solve dimentional diaster, hierachical methods decomposes vnavigation into subproblems.  &lt;br /&gt;
+  1) Hierarchical abstract machines&lt;br /&gt;
+take final gaol into some subgoals and solve subgoals first. But it relies on manually constructing subgoals. &lt;br /&gt;
+  &lt;img src=&quot;http://localhost:5555/assets/images/ham.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+  then comes to [73]~[77]&lt;br /&gt;
+  2).option methods&lt;br /&gt;
+  big area!!&lt;br /&gt;
+ 3.multi-task drl vNavigation
+  Traditional DRL agents can navigate well in one domain but will perform poorly in other unseen domains, which meanstraditional DRL navigation lacks transferability.&lt;br /&gt;
+  1). distillation method&lt;/p&gt;</content><author><name></name></author><summary type="html">A survey on Visual Navigation for Artificial Agents with deep reinforcement learning</summary></entry><entry><title type="html">reinforce_basic</title><link href="http://localhost:5555/blog/rl_basic/" rel="alternate" type="text/html" title="reinforce_basic" /><published>2023-03-07T00:00:00+08:00</published><updated>2023-03-07T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl_basic</id><content type="html" xml:base="http://localhost:5555/blog/rl_basic/">&lt;!--
 
 # reinforce_basic
  
