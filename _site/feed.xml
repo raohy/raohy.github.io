@@ -1,4 +1,193 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:5555/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5555/" rel="alternate" type="text/html" /><updated>2023-03-09T22:51:08+08:00</updated><id>http://localhost:5555/feed.xml</id><title type="html">rao</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Rao’s blog</title><link href="http://localhost:5555/blog/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Rao’s blog" /><published>2023-03-08T10:59:04+08:00</published><updated>2023-03-08T10:59:04+08:00</updated><id>http://localhost:5555/blog/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:5555/blog/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:5555/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:5555/" rel="alternate" type="text/html" /><updated>2023-06-20T14:18:48+08:00</updated><id>http://localhost:5555/feed.xml</id><title type="html">rao</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">隐私计算</title><link href="http://localhost:5555/blog/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97/" rel="alternate" type="text/html" title="隐私计算" /><published>2023-06-07T00:00:00+08:00</published><updated>2023-06-07T00:00:00+08:00</updated><id>http://localhost:5555/blog/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97</id><content type="html" xml:base="http://localhost:5555/blog/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97/">&lt;p&gt;隐私计算&lt;/p&gt;
+
+&lt;p&gt;1.安全多方计算（MPC）
+多方计算：将多个参与者各自的数据凑在一起，并在这个大数据上进行一定的计算，例如有数据集：a1,a2,a3..an, 目的：得到某个函数输出：f(a1.a2,…,an)
+安全多方计算（Secure Multi-party Computation,MPC)能够使多方在不知晓对方内容的情况下，参与协同计算，最终产生有价值的分析内容。即对除了数据源，对其他数据方和中央处理方都不可见。依赖于多种密码学基础上的工具应用。
+常见的安全计算方法可以分为两类：基于噪音和非基于噪音的。
+基于噪音的,代表是：差分隐私算法。对数据用噪声干扰，类似于图片打马赛克。优点：效率高，但最后得到的结果不够准确，会有误差。
+非噪声方法：主要有混淆电路(Garbled Circuit).同态加密(Homomorphic Encryption)/密钥分享(Secret Sharing)
+混淆电路：
+ 理论基础：任何函数都可以被电路所表示，例如有x,y想进行运算，即得到结果f(x,y)=z
+ A根据函数生成电路，计算得到电路的真值表，对输入x,y进行映射，得到四个不同的标识（x/y=1/0)，用标识对结果进行对称加密。将加密得到的混淆表（即多个加密的结果值）传输给B.
+ A将a输入的映射传输给B，B通过不经意传输得到其输入对应的标识，再对混淆表进行解码操作，将结果回传。
+密钥分享：
+背景：（t-n），即n个用户，如果有大于等于t个用户的信息，即可还原出原信息
+shamir多项式法：
+&lt;img src=&quot;http://localhost:5555/assets/images/隐私计算/shamir.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;http://localhost:5555/assets/images/隐私计算/shamir2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;比特分享：&lt;/p&gt;
+
+&lt;p&gt;① 差分隐私
+名词：随机化算法A（能够输出某一分布的算法），相邻数据集
+&lt;img src=&quot;http://localhost:5555/assets/images/隐私计算/差分隐私.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+该算法A作用于任何相邻数据集，得到一个特定输出O的概率差不多。观察者通过观察输出结果很难察觉出数据集的微小变化。
+最简单的方法：加白噪声（拉普拉斯噪声/高斯噪声）
+参考：https://zhuanlan.zhihu.com/p/31635977
+2.联邦学习
+在本地学习到模型，将模型数据通过加密算法传输到中心节点，进行二次训练后得到最终的训练模型&lt;/p&gt;</content><author><name></name></author><summary type="html">隐私计算</summary></entry><entry><title type="html">reinforce_navigation</title><link href="http://localhost:5555/blog/rl-lux/" rel="alternate" type="text/html" title="reinforce_navigation" /><published>2023-06-01T00:00:00+08:00</published><updated>2023-06-01T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl-lux</id><content type="html" xml:base="http://localhost:5555/blog/rl-lux/">&lt;h2 id=&quot;approch-summary&quot;&gt;Approch Summary&lt;/h2&gt;
+&lt;h3 id=&quot;top1&quot;&gt;top1&lt;/h3&gt;</content><author><name></name></author><summary type="html">Approch Summary top1</summary></entry><entry><title type="html">principal of economics</title><link href="http://localhost:5555/blog/p_o_economics/" rel="alternate" type="text/html" title="principal of economics" /><published>2023-04-24T00:00:00+08:00</published><updated>2023-04-24T00:00:00+08:00</updated><id>http://localhost:5555/blog/p_o_economics</id><content type="html" xml:base="http://localhost:5555/blog/p_o_economics/">&lt;h3 id=&quot;principal-of-economics&quot;&gt;Principal of Economics&lt;/h3&gt;
+&lt;h4 id=&quot;第一篇-导言&quot;&gt;第一篇 导言&lt;/h4&gt;
+&lt;h5 id=&quot;经济学十大原理&quot;&gt;经济学十大原理&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;人们面临权衡取舍&lt;/li&gt;
+  &lt;li&gt;某种东西的成本是为了得到它所放弃的东西&lt;/li&gt;
+  &lt;li&gt;理性人考虑边际量&lt;/li&gt;
+  &lt;li&gt;人们会对激励做出反应&lt;/li&gt;
+  &lt;li&gt;贸易可以使每个人的状况都变得更好&lt;/li&gt;
+  &lt;li&gt;市场通常是组织经济活动的一种好方法&lt;/li&gt;
+  &lt;li&gt;政府有时可以改善市场结果&lt;/li&gt;
+  &lt;li&gt;一国的生活水平取决于它生产物品与服务的能力&lt;/li&gt;
+  &lt;li&gt;当政府发发行了过多货币时，物价上升&lt;/li&gt;
+  &lt;li&gt;社会面临通货膨胀与失业之间的短期权衡取舍&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;像经济学家一样思考&quot;&gt;像经济学家一样思考&lt;/h5&gt;
+&lt;p&gt;作为科学家的经济学家
+科学方法：观察/理论和进一步观察-&amp;gt;假设-&amp;gt;得出经济模型：
+eg. 
+&lt;img src=&quot;http://localhost:5555/assets/images/p_o_economics/circular_flow.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+循环流量图
+&lt;img src=&quot;http://localhost:5555/assets/images/p_o_economics/production_pssibilities_front.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+生产可能性边界&lt;/p&gt;
+
+&lt;p&gt;微观经济学：研究家庭和企业如何做出决策，以及它们如何在特定市场上相互交易
+宏观经济学：研究整体经济现象&lt;/p&gt;
+
+&lt;p&gt;作为政策顾问的经济学家
+实证表述：描述性的：最低工资法引起了失业
+规范表述：规定性的：政府应该提高最低工资&lt;/p&gt;
+
+&lt;h5 id=&quot;相互依存性与贸易的好处&quot;&gt;相互依存性与贸易的好处&lt;/h5&gt;
+
+&lt;p&gt;假设Frank和Ruby每人每天工作8小时，把这个时间用于生产土豆和牛肉上
+        ———————————————-
+        生产1盎司所需要的时间       8个小时的产量（盎司）
+        ———————————————-
+        牛肉       土豆             牛肉     土豆
+        ———————————————–
+Frank   60          15              8       32
+Ruby    20          10              24      48&lt;/p&gt;
+
+&lt;p&gt;专业化与贸易：&lt;/p&gt;</content><author><name></name></author><summary type="html">Principal of Economics 第一篇 导言 经济学十大原理 人们面临权衡取舍 某种东西的成本是为了得到它所放弃的东西 理性人考虑边际量 人们会对激励做出反应 贸易可以使每个人的状况都变得更好 市场通常是组织经济活动的一种好方法 政府有时可以改善市场结果 一国的生活水平取决于它生产物品与服务的能力 当政府发发行了过多货币时，物价上升 社会面临通货膨胀与失业之间的短期权衡取舍</summary></entry><entry><title type="html">lifelong problem</title><link href="http://localhost:5555/blog/lifelong_problem/" rel="alternate" type="text/html" title="lifelong problem" /><published>2023-03-28T00:00:00+08:00</published><updated>2023-03-28T00:00:00+08:00</updated><id>http://localhost:5555/blog/lifelong_problem</id><content type="html" xml:base="http://localhost:5555/blog/lifelong_problem/">&lt;h3 id=&quot;a-lifelong-learning-approach-tomobile-robot-navigation&quot;&gt;A Lifelong Learning Approach toMobile Robot Navigation&lt;/h3&gt;
+&lt;p&gt;Motivation:
+Mobile robots often encounter new environments, and classic methods require experts to tune parameters based on experience or intuition. Current learning-based models, such as Deep Reinforcement Learning (DRL), suffer from bad generalization and tend to forget past parameters when training in a new environment. To solve this “lifelong learning” problem, three categories of approaches have been proposed: 1) regularization to prevent learned weights from deviating too much from old weights; 2) training generative models to recover old data for joint optimization; and 3) adopting dynamic network architectures for learning more tasks.&lt;/p&gt;
+
+&lt;p&gt;Intuition:
+Catastrophic forgetting occurs when old knowledge is overwritten by new learning, resulting in difficulty navigating in specific scenarios. Therefore, the paper proposes a Lifelong Learning for Navigation (LLfN) framework that learns an auxiliary planner πθ to assist a classical planner π0 only in navigating difficult instances.&lt;/p&gt;
+
+&lt;p&gt;Comparison:
+It’s worth noting that LLfN has similarities to transfer learning, but it also considers backward transfer - how learning the current task can maintain or improve the performance of old tasks.&lt;/p&gt;
+
+&lt;p&gt;Method:
+The paper uses Gradient Episodic Memory (GEM) from category one, which allows new experiences to improve performance on old tasks while imposing constraints on past jobs. 
+&lt;img src=&quot;http://localhost:5555/assets/images/A_Lifelong_Learning_Approach_to/equation1.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+GEM optimizes the loss function with L(πθ,X) = E(s,a)∼X||πθ(s)−a||2.
+&lt;img src=&quot;http://localhost:5555/assets/images/A_Lifelong_Learning_Approach_to/LLfm1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Training:
+The paper proposes an approach for training mobile robots to navigate using a combination of classical planning and lifelong learning. The method is based on an initialized beginning policy, which can be random or based on a classical planner such as DWA, to explore the environment. The robot’s experience is stored in a memory buffer, which is used to retain information about past experiences and improve performance on previous tasks.&lt;/p&gt;
+
+&lt;p&gt;To discriminate the performance of actions in a particular state, the paper proposes an algorithm based on heuristics extracted from DWA, which evaluates the quality of each action and selects the best one. If the performance is below a threshold, the best actions from the memory buffer are retrieved and used to update the buffer of the current environment. The policy is then optimized using GEM, which improves the robot’s performance on past tasks while allowing it to learn new ones.&lt;/p&gt;
+
+&lt;p&gt;Prediction:
+The proposed approach uses a combination of the beginning policy and the current policy to determine navigation. The beginning policy is used to explore the environment and collect experience, while the current policy is optimized using GEM to improve performance on past tasks and learn new ones. The resulting policy is then used to navigate the robot through the environment.&lt;/p&gt;
+
+&lt;h3 id=&quot;lifelong-roboticre-inforcement-learning-by-retaining-experiences&quot;&gt;LIFELONG ROBOTICRE INFORCEMENT LEARNING BY RETAINING EXPERIENCES&lt;/h3&gt;
+&lt;p&gt;motivation: the standard multi-task reinforcement learning paradigm, which requires datacollection from each task in round-robin fashion, can often be unrealistic for embodied agents such as physical robots.
+the main challenge is forward transfer. The traditional method is weight transfer which may discard important information from the past experiencesthat  are  relevant  to  future  tasks.
+The author use the experience replay method. We measure the similarity between the past samples and the current task’s transition dynamics to determinewhich samples to transfer in the online fine-tuning phase.&lt;/p&gt;
+
+&lt;p&gt;related：
+fine-tuning method: Efficient adaptation for end-to-end vision-based robotic manipulation. 2020
+continual learning: Knowledge transfer in deep actor-critic reinforcement learning 2020
+domain adapation: DARC 2021&lt;/p&gt;
+
+&lt;h3 id=&quot;towards-continual-reinforcement-learninga-review-and-perspectives&quot;&gt;Towards Continual Reinforcement Learning:A Review and Perspectives&lt;/h3&gt;
+&lt;p&gt;continual learning approaches:
+1.explicit knowledge retention
+1). parameter storage based
+I.use of shared latent components
+II.provide the representation of networks trained on previous task
+    curse of dimension / storage requirement
+    -&amp;gt;consider a single representation
+III.store a prior about the extent of past usage of each parameters(popular)
+context information
+2).distillation based
+3).rehearsal based
+    experience replay
+        improvement:learn to compress experiences during learning&lt;/p&gt;
+
+&lt;p&gt;2.leveraging shared structure
+continual learning agents should reuse aspects of the solutions to previously solved subproblems through function composition by abstracting relevant meaningful information in the form of abstract concepts or skills.
+1).modularity and composition focused
+ Compositional generalization canbe understood as leveraging prior experience to solve compositional perturbations of priorproblems.
+ decomposite the task into several modules, train in seperate modules and combine them together.
+2).state abstractions focused
+State abstraction (or aggregation) is central to the idea of capturing common structurewithin various tasks and potentially facilitating positive forward transfer across related tasks.
+I. One such abstraction is state abstractions based on the PAC framework.
+II. can be preserved while learning abstractionsis the underlying reward and transition model,
+3).skill focused
+4).goal focused
+5).auxiliaary tasks focused&lt;/p&gt;
+
+&lt;p&gt;3.learning to learn
+1).context detection
+2).learning to adapt
+the agent attempts to learn to alter its own optimization process based on historical success and failure.&lt;/p&gt;</content><author><name></name></author><summary type="html">A Lifelong Learning Approach toMobile Robot Navigation Motivation: Mobile robots often encounter new environments, and classic methods require experts to tune parameters based on experience or intuition. Current learning-based models, such as Deep Reinforcement Learning (DRL), suffer from bad generalization and tend to forget past parameters when training in a new environment. To solve this “lifelong learning” problem, three categories of approaches have been proposed: 1) regularization to prevent learned weights from deviating too much from old weights; 2) training generative models to recover old data for joint optimization; and 3) adopting dynamic network architectures for learning more tasks.</summary></entry><entry><title type="html">icra_2022</title><link href="http://localhost:5555/blog/rl_icra_2022/" rel="alternate" type="text/html" title="icra_2022" /><published>2023-03-20T00:00:00+08:00</published><updated>2023-03-20T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl_icra_2022</id><content type="html" xml:base="http://localhost:5555/blog/rl_icra_2022/">&lt;ol&gt;
+  &lt;li&gt;Nearest-Neighbor-Based Collision Avoidance for Quadrotors Via Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Learning Multi-Task Transferable Rewards Via Variational Inverse Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Weakly Supervised Disentangled Representation for Goal-Conditioned Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;AMI: Adaptive Motion Imitation Algorithm Based on Deep Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Human-Following and -Guiding in Crowded Environments Using Semantic Deep-Reinforcement-Learning for Mobile Service Robots&lt;/li&gt;
+  &lt;li&gt;Decentralized Ride-Sharing of Shared Autonomous Vehicles Using Graph Neural Network-Based Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Excavation Reinforcement Learning Using Geometric Representation&lt;/li&gt;
+  &lt;li&gt;Value Learning from Trajectory Optimization and Sobolev Descent: A Step Toward Reinforcement Learning with Superlinear Convergence Properties&lt;/li&gt;
+  &lt;li&gt;Reinforcement Learning with Evolutionary Trajectory Generator: A General Approach for Quadrupedal Locomotion&lt;/li&gt;
+  &lt;li&gt;Unified Data Collection for Visual-Inertial Calibration Via Deep Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Relative Distributed Formation and Obstacle Avoidance with Multi-Agent Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Toward Expedited Impedance Tuning of a Robotic Prosthesis for Personalized Gait Assistance by Reinforcement Learning Control&lt;/li&gt;
+  &lt;li&gt;Offline Learning of Counterfactual Perception As Prediction for Real-World Robotic Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;A Deep Reinforcement Learning Environment for Particle Robot Navigation and Object Manipulation&lt;/li&gt;
+  &lt;li&gt;Confidence-Based Robot Navigation under Sensor Occlusion with Deep Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Deep Reinforcement Learning for Next-Best-View Planning in Agricultural Applications&lt;/li&gt;
+  &lt;li&gt;Real-Robot Deep Reinforcement Learning: Improving Trajectory Tracking of Flexible-Joint Manipulator with Reference Correction&lt;/li&gt;
+  &lt;li&gt;Discovering Synergies for Robot Manipulationwith Multi-Task Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Personalized Car Following for Autonomous Driving with Inverse Reinforcement Learning&lt;/li&gt;
+  &lt;li&gt;Closed-Loop Dynamic Control of a Soft Manipulator Using Deep Reinforcement Learning
+21.Seeking Visual Discomfort: Curiosity-Driven Representations for Reinforcement Learning&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Nearest-Neighbor-Based Collision Avoidance for Quadrotors Via Reinforcement Learning Learning Multi-Task Transferable Rewards Via Variational Inverse Reinforcement Learning Weakly Supervised Disentangled Representation for Goal-Conditioned Reinforcement Learning AMI: Adaptive Motion Imitation Algorithm Based on Deep Reinforcement Learning Human-Following and -Guiding in Crowded Environments Using Semantic Deep-Reinforcement-Learning for Mobile Service Robots Decentralized Ride-Sharing of Shared Autonomous Vehicles Using Graph Neural Network-Based Reinforcement Learning Excavation Reinforcement Learning Using Geometric Representation Value Learning from Trajectory Optimization and Sobolev Descent: A Step Toward Reinforcement Learning with Superlinear Convergence Properties Reinforcement Learning with Evolutionary Trajectory Generator: A General Approach for Quadrupedal Locomotion Unified Data Collection for Visual-Inertial Calibration Via Deep Reinforcement Learning Relative Distributed Formation and Obstacle Avoidance with Multi-Agent Reinforcement Learning Toward Expedited Impedance Tuning of a Robotic Prosthesis for Personalized Gait Assistance by Reinforcement Learning Control Offline Learning of Counterfactual Perception As Prediction for Real-World Robotic Reinforcement Learning A Deep Reinforcement Learning Environment for Particle Robot Navigation and Object Manipulation Confidence-Based Robot Navigation under Sensor Occlusion with Deep Reinforcement Learning Deep Reinforcement Learning for Next-Best-View Planning in Agricultural Applications Real-Robot Deep Reinforcement Learning: Improving Trajectory Tracking of Flexible-Joint Manipulator with Reference Correction Discovering Synergies for Robot Manipulationwith Multi-Task Reinforcement Learning Personalized Car Following for Autonomous Driving with Inverse Reinforcement Learning Closed-Loop Dynamic Control of a Soft Manipulator Using Deep Reinforcement Learning 21.Seeking Visual Discomfort: Curiosity-Driven Representations for Reinforcement Learning</summary></entry><entry><title type="html">reinforce_hierachical_method</title><link href="http://localhost:5555/blog/rl-hierachical/" rel="alternate" type="text/html" title="reinforce_hierachical_method" /><published>2023-03-12T00:00:00+08:00</published><updated>2023-03-12T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl-hierachical</id><content type="html" xml:base="http://localhost:5555/blog/rl-hierachical/">&lt;h3 id=&quot;a-deep-hierarchical-approach-to-lifelong-learning-in-minecraft&quot;&gt;A Deep Hierarchical Approach to Lifelong Learning in Minecraft&lt;/h3&gt;
+&lt;p&gt;when encoutering lifelong problem, efficient retention and tranfer prior knowledge to the new task is necessary because of the curse of diemension. The process is divided into 3 stage:&lt;br /&gt;
+1.retain previous knowledge &lt;br /&gt;
+2.needs the ability to choose relevant prior knowledge for solving new tasks.&lt;br /&gt;
+3.Ensures the effective and efficient interaction of the retention and transfer elements.&lt;/p&gt;
+
+&lt;h3 id=&quot;policy-distillation&quot;&gt;Policy distillation&lt;/h3&gt;
+
+&lt;p&gt;temperature_softmax&lt;br /&gt;
+normal softmax: $\frac{e^(a_i)}{\sum_i e^(a_i)}$
+temperature_softmax: 
+eg.
+softmax result:
+[0.09003057317038046, 0.24472847105479767, 0.6652409557748219]
+when t = 2，equals [1/2,2/2,3/2],calculate softmax, get：
+[0.1863237232258476, 0.30719588571849843, 0.506480391055654]
+when t = 0.5，equals [1/0.5,2/0.5,3/0.5],calculate softmax, get：
+[0.015876239976466765, 0.11731042782619835, 0.8668133321973348]&lt;/p&gt;
+
+&lt;p&gt;so it is obvious that when t is larger the result getting more smooth, get more chance to explore the low probability choices.&lt;/p&gt;
+
+&lt;p&gt;so methods:
+\tau = $\frac{\tau_0}{1+\log_{2}^{T}}$
+T is the training times
+so when the training progress, \tau decreases, making  the network become less smooth.&lt;/p&gt;
+
+&lt;p&gt;option is like a intra-policy that works under the whole process&lt;/p&gt;
+
+&lt;h3 id=&quot;the-option-critic-architecture&quot;&gt;The Option-Critic Architecture&lt;/h3&gt;
+&lt;p&gt;The majority of the existing work has focused on finding subgoals and subsequently learning policies to achieve them. This method presents an alternative view, which blurs the line between the problem of discovering options from that of learning options(subgoals). We derive policy gradient theorems for options and propose a new option-critic architecture capable of learning both the internal policies and the termination conditions of options, in tandem with the policy over options, and without the need to provide any additional rewards or subgoals.&lt;/p&gt;
+
+&lt;p&gt;option w&lt;/p&gt;</content><author><name></name></author><summary type="html">A Deep Hierarchical Approach to Lifelong Learning in Minecraft when encoutering lifelong problem, efficient retention and tranfer prior knowledge to the new task is necessary because of the curse of diemension. The process is divided into 3 stage: 1.retain previous knowledge 2.needs the ability to choose relevant prior knowledge for solving new tasks. 3.Ensures the effective and efficient interaction of the retention and transfer elements.</summary></entry><entry><title type="html">Welcome to Rao’s blog</title><link href="http://localhost:5555/blog/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Rao’s blog" /><published>2023-03-08T10:59:04+08:00</published><updated>2023-03-08T10:59:04+08:00</updated><id>http://localhost:5555/blog/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:5555/blog/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -38,7 +227,53 @@ take final gaol into some subgoals and solve subgoals first. But it relies on ma
   big area!!&lt;br /&gt;
  3.multi-task drl vNavigation
   Traditional DRL agents can navigate well in one domain but will perform poorly in other unseen domains, which meanstraditional DRL navigation lacks transferability.&lt;br /&gt;
-  1). distillation method&lt;/p&gt;</content><author><name></name></author><summary type="html">A survey on Visual Navigation for Artificial Agents with deep reinforcement learning</summary></entry><entry><title type="html">reinforce_basic</title><link href="http://localhost:5555/blog/rl_basic/" rel="alternate" type="text/html" title="reinforce_basic" /><published>2023-03-07T00:00:00+08:00</published><updated>2023-03-07T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl_basic</id><content type="html" xml:base="http://localhost:5555/blog/rl_basic/">&lt;!--
+  1). distillation method&lt;br /&gt;
+  the original distillation model is the Rusuet al.[83]. Then convolution was introduced to solve the same data distribution problem&lt;/p&gt;
+
+&lt;p&gt;2). progress model&lt;/p&gt;
+
+&lt;p&gt;4.memory-inferene drl vNavigation
+ 1). replay buffer
+ normal replay buffer in DQN&lt;br /&gt;
+ hierarchical prioritized experience replay to selectively choose experiences&lt;br /&gt;
+ store the world model in the buffer&lt;br /&gt;
+ SoRB graph search to decomposed target into a sequence of easier subgoals to solve sparse problem&lt;br /&gt;
+ 2).memory networks&lt;br /&gt;
+ hese proposed architectures storerecent observations into their memory and retrieve relevantmemory based on the temporal context, common networks include MQN/RMQN/FRMQN
+ 3).episodic memory&lt;/p&gt;
+
+&lt;p&gt;5).vision-and-language (VLN)
+ agents follow the natural languague instructions to navigate.&lt;/p&gt;
+
+&lt;p&gt;explore unseen environments by imitating its past and good decisions.&lt;/p&gt;
+
+&lt;p&gt;5.challenge:
+1).data inefficiency
+when inputs are high-dimensional, model usually needs a large number of samples./ sparse rewards-&amp;gt; poor convergence and long training time.
+2).poor generalization
+ deep network are hard to tranfer
+     ) partial observable
+6.oppotunities
+1).policy hierarchy
+decomposes into subproblems
+2).meta learning
+training from a small amount of data
+3).memory
+ draw on previous experience in similar conditions from memory
+4).multi-modal fusion&lt;/p&gt;
+
+&lt;h3 id=&quot;target-driven-visual-navigation-in-indoor-scenesusing-deep-reinforcement-learning&quot;&gt;Target-driven Visual Navigation in Indoor Scenesusing Deep Reinforcement Learning&lt;/h3&gt;
+&lt;p&gt;this paper proposes two methods for solving two problems:1.lack of generalization capability to new goals 2.data inefficiency, require several episodes to converge.
+Then comes to two solutions:1.actor-critic models include targets. 2. propose AI2-THOR framework provides episodes with high-quality 3D scene.&lt;/p&gt;
+
+&lt;p&gt;However,general DRL approaches (e.g., [2], [3]) are designed tolearn a policy that depends only on the current state, andthe goal is implicitly embedded in the model parameters.Hence, it is necessary to learn new model parameters for anew target. This is problematic since training DRL agents iscomputationally expensive.&lt;/p&gt;
+
+&lt;p&gt;1.target generalization 2.scene generalization 3.real-world generalization&lt;/p&gt;
+
+&lt;h3 id=&quot;value-iteration-networks&quot;&gt;Value Iteration Networks&lt;/h3&gt;
+&lt;p&gt;novel differentiable approximation of the value-iteration algorithm&lt;/p&gt;
+
+&lt;h3 id=&quot;end-to-end-training-of-deep-visuomotor-policies&quot;&gt;End-to-End Training of Deep Visuomotor Policies&lt;/h3&gt;</content><author><name></name></author><summary type="html">A survey on Visual Navigation for Artificial Agents with deep reinforcement learning</summary></entry><entry><title type="html">reinforce_basic</title><link href="http://localhost:5555/blog/rl_basic/" rel="alternate" type="text/html" title="reinforce_basic" /><published>2023-03-07T00:00:00+08:00</published><updated>2023-03-07T00:00:00+08:00</updated><id>http://localhost:5555/blog/rl_basic</id><content type="html" xml:base="http://localhost:5555/blog/rl_basic/">&lt;!--
 
 # reinforce_basic
  
@@ -50,12 +285,38 @@ take final gaol into some subgoals and solve subgoals first. But it relies on ma
 ----------------------------------
  --&gt;
 
+&lt;h1 id=&quot;a3c&quot;&gt;A3C&lt;/h1&gt;
+
+&lt;h1 id=&quot;a2c&quot;&gt;A2C&lt;/h1&gt;
+&lt;p&gt;add one coordinator to&lt;/p&gt;
+
+&lt;h1 id=&quot;dpg&quot;&gt;DPG&lt;/h1&gt;
+&lt;p&gt;some notes:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;deterministic policy gradient is the limitting case, as policy variance tends to zero.&lt;/li&gt;
+  &lt;li&gt;policy gradient integrates over both state and action spaces, whereas in the determinstic case it only integrates over the state space.&lt;/li&gt;
+  &lt;li&gt;build a actor-critic algorithms&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;action space A and policy needs to be continuous
+Q:
+为什么 approximation 那里i)要求线性&lt;/p&gt;
+
+&lt;h1 id=&quot;maddpg&quot;&gt;MADDPG&lt;/h1&gt;
+&lt;p&gt;centralizd training(critic,allowing the policy to use extra information to ease training )/decentralized execution(actor)
+thus proposed a simple extension of actor-critic policy gradient methods where the critic is augmented with extra information about the policy of the other agents&lt;/p&gt;
+
+&lt;p&gt;for training:&lt;/p&gt;
+
+&lt;p&gt;$ E=mc^2 $
+\(\beta\)&lt;/p&gt;
+
 &lt;h1 id=&quot;trpo&quot;&gt;TRPO&lt;/h1&gt;
 &lt;p&gt;trust region policy optimization(TRPO). &lt;br /&gt;
  Normal policy gradient method suffers from the unconvergence because of the big difference one batch. The paper prove that minimizing a certain surrogate objective funtion guarantees policy improvement with non-trivial step sizes.&lt;/p&gt;
 
 &lt;p&gt;###Approximation:
-η(π) =Es0,a0,…[∞∑t=0γtr(st)] η(π)is the reward function that starting from the initial state.
+$η(π) =Es0,a0,…[∞∑t=0γtr(st)]$ η(π)is the reward function that starting from the initial state.
 the expected return of another policy ̃π can be expressed as
 η( ̃π) =η(π) +Es0,a0,···∼ ̃π[∞∑t=0γtAπ(st,at)]
 define Lπ( ̃π) =η(π) +∑sρπ(s)∑a ̃π(a|s)Aπ(s,a).
